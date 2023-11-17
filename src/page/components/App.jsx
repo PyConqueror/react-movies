@@ -10,13 +10,17 @@ import {movies} from '../../data'
 
 import './App.css'
 function App() {
-  const [user, setUser] = useState(true)
+  const [user, setUser] = useState(null)
+
+  function login(username) {
+    setUser(username)
+  }
 
   return (
     <main className='app'>
       {user ? 
       <> 
-        <NavBar/>
+        <NavBar user={user}/>
         <Routes>
           <Route path="/" element={<MoviesListPage movies={movies} />} />
           <Route path="/movies/:movieName" element={<MovieDetailPage />} />
@@ -24,7 +28,7 @@ function App() {
         </Routes>
       </>  
       :
-      <LoginPage/>
+      <LoginPage login={login}/>
     }
     </main>
   ) 

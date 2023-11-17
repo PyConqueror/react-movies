@@ -40,3 +40,18 @@
 .read-the-docs {
   color: #888;
 }
+
+.movie-card {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid grey;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: lightblue;
+}
+
+.movie-card > img {
+  border: solid 5px goldenrod;
+  border-radius: 25px;
+}
